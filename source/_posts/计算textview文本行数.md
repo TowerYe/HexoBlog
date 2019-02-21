@@ -8,10 +8,9 @@ tags:
 cover_picture: /images/dog.jpeg
 ---
 
-![](/images/dog.jpeg)
+![](/images/cat.jpg)
 
-通过 **ViewTreeObserver** 来计算 **TextView** 当前内容所占的行数。
-
+&emsp;&emsp;通过 **ViewTreeObserver** 来计算 **TextView** 当前内容所占的行数，并替换指定行数的某几个字符为指定的字符。如：若当前 **TextView** 内容行数超过两行，先得到第一行文本最多能显示的字数，然后把第二行文本中的最后7个字符替换成指定的字符串，具体的代码如下：
 
 ```
 ViewTreeObserver observer = observer = titleTxt.getViewTreeObserver();
