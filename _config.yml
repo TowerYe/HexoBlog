@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Mr Ye
+title: Mr Ye‘s Blog
 subtitle:
 description:
 keywords:
@@ -81,3 +81,20 @@ deploy:
   type: git
   repo: https://github.com/TowerYe/TowerYe.github.io
   branch: master
+
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-shizuku
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true

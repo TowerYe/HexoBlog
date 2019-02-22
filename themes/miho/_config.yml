@@ -11,7 +11,7 @@ keywords: YYT,叶永涛的博客
 # Head headline | 头部标题
 header_title: 叶永涛的博客
 # Head description | 头部描述
-header_description: 一个专注 Android 开发的技术博客
+header_description: 一个专注移动端开发的技术博客
 # Link to your logo | logo地址
 logo: images/logo.png
 # Link to your banner_img | 首页banner图地址
@@ -91,7 +91,7 @@ share: true
 # Style customization | 样式定制
 style:
   # Main color tone | 主色调
-  main_color: '#F00'
+  main_color: '#408cef'
 
 # Reward | 打赏
 
@@ -100,7 +100,7 @@ reward:
   # 0-关闭, 1-所有文章均有打赏, 2-文章的md文件里有reward:true属性，才有打赏
   status: 1
   # 标题
-  title: 谢谢老板( ੭ ˙ᗜ˙ )੭
+  title: (♧◑ω◑)☞谢谢支持☜(◐ω◐♧)
   # 微信，关闭设为 false
   wechat: images/wechat_code.jpg
   # 支付宝，关闭设为 false
@@ -140,3 +140,20 @@ access_counter:
 
 # Copyright Information | 版权信息
 copyright: 2019 Ye YongTao
+
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-shizuku
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true
