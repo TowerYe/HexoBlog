@@ -117,10 +117,10 @@ youyan_id: false
 disqus: false
 # gitment  https://github.com/imsun/gitment
 gitment:
-  owner: false   #你的 GitHub ID
-  repo: ''   #存储评论的 repo
-  client_id: '' #client ID
-  client_secret: ''  #client secret
+  owner: TowerYe   #你的 GitHub ID
+  repo: 'TowerYe.github.io'   #存储评论的 repo
+  client_id: '640cb5e6e9a9c5797b13' #client ID
+  client_secret: '5f4ad8ec51cc50501c0c308ea0d0c0dd7e72da47'  #client secret
 
 # Analytics | 分析
 # 站长分析，输入站点id
