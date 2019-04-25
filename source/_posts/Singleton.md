@@ -18,9 +18,9 @@ cover_picture: /images/posts/singleton/cover.png
 * 单例类必须自己创建自己的唯一实例。
 * 单例类必须给所有其他对象提供这一实例。
 
-##一、Java实现单例模式
+## 一、Java实现单例模式
 
-###1.1 懒汉式（线程不安全）
+### 1.1 懒汉式（线程不安全）
 
 | 是否懒加载 | 是否线程安全 | 描述  |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ public class Singleton {
 }
 ```
 
-###1.2 懒汉式（线程安全）
+### 1.2 懒汉式（线程安全）
 
 | 是否懒加载 | 是否线程安全 | 描述  |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ public class Singleton {
 }
 ```
 
-###1.3 饿汉式（线程安全）
+### 1.3 饿汉式（线程安全）
 
 | 是否懒加载 | 是否线程安全 | 描述  |
 | --- | --- | --- |
@@ -91,7 +91,7 @@ public class Singleton {
 }
 ```
 
-###1.4 双检锁/双重校验锁（DCL，即 double-checked locking）（线程安全）
+### 1.4 双检锁/双重校验锁（DCL，即 double-checked locking）（线程安全）
 
 | 是否懒加载 | 是否线程安全 | 描述  |
 | --- | --- | --- |
@@ -119,7 +119,7 @@ public class Singleton {
 }
 ```
 
-###1.5 登记式/静态内部类（线程安全）
+### 1.5 登记式/静态内部类（线程安全）
 
 | 是否懒加载 | 是否线程安全 | 描述  |
 | --- | --- | --- |
@@ -144,7 +144,7 @@ public class Singleton {
 }
 ```
 
-###1.6 枚举（线程安全）
+### 1.6 枚举（线程安全）
 
 | 是否懒加载 | 是否线程安全 | 描述  |
 | --- | --- | --- |
@@ -207,11 +207,11 @@ public enum Singleton implements ISingleton {
 
 &emsp;&emsp;一般情况下，不建议使用第 1 种和第 2 种懒汉方式，建议使用第 3 种饿汉方式。只有在要明确实现 lazy loading 效果时，才会使用第 5 种方式。如果涉及到反序列化创建对象时，可以尝试使用第 6 种枚举方式。如果有其他特殊的需求，可以考虑使用第 4 种双检锁方式。
 
-##二、Kotlin实现单例模式
+## 二、Kotlin实现单例模式
 
 &emsp;&emsp;在前面提到的 Java 中实现单例模式的方式，将其翻译成 Kotlin 就是 Kotlin 的单例实现了，但是这样用 Java 的方法去显得有些多余和不舒服，因为，Kotlin 中有现成的单例可以用 —— **Object**。
 
-###2.1 饿汉式
+### 2.1 饿汉式
 
 **实现方式**
 
@@ -238,7 +238,7 @@ public final class Singleton {
 
 &emsp;&emsp;这就意味着 Kotlin 通过 `Object` 关键字，帮我们实现了饿汉式单例的相关逻辑。
 
-###2.2 双检锁/双重校验锁（DCL，即 double-checked locking）
+### 2.2 双检锁/双重校验锁（DCL，即 double-checked locking）
 
 **实现方式**
 
@@ -305,7 +305,7 @@ private class SynchronizedLazyImpl<out T>(initializer: () -> T, lock: Any? = nul
 ```
 &emsp;&emsp;通过 `value` 的 `get()` 的方法可以很清楚的看到，通过 `UNINITIALIZED_VALUE` 的值来进行不同的操作，值为 true 表示已经延迟实例化过了，false 表示没有被实例化。一旦`UNINITIALIZED_VALUE` 的值变为 true，则会一直保持为 true，所以类不会再继续实例化。这与 Java 的双重校验锁模式的逻辑是一样的。
 
-##三、带参数的单例模式
+## 三、带参数的单例模式
 
 &emsp;&emsp;最近在把以前的 Java 代码转换成 Kotlin 时，遇到了类似如下带参的单例模式：
 
