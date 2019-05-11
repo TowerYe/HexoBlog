@@ -9,12 +9,12 @@
 ### 关于学习
 
 学无止境...
-近期学习方向：Kotlin
+近期学习方向：Kotlin、Flutter
 
 ### 关于座右铭
 
-> 有志者，事竟成
-> 不要怂，就是干
+> Instead of complaining about it, I'll just give it my all
+>（与其抱怨不停，不如铆足劲儿把它做好）
 
 ### 关于爱好
 
